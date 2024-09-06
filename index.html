@@ -7,13 +7,15 @@
     <link rel="icon" href="./icon head.png" type="image/x-icon" />
 
     <title>Portfolio | Saran kumar</title>
-    <!--Poiret One font-->
+    <!--Jost font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!--Fontaswsome cdn-->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <!--CSS File-->
     <link rel="stylesheet" href="index.css" />
@@ -30,22 +32,76 @@
     <!--Navbar-->
     <header>
       <nav class="flex justify-center my-5">
-        <div
-          class="w-[600px] bg-[white] bg-opacity-10 backdrop-blur-sm shadow-white shadow-sm py-3 rounded-[50px]"
-        >
-          <ul class="navbar-nav flex justify-around font-[Poiret One] text-white font-[600]">
-            <li class="nav-item"><a href="#" class="nav-link ">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Skills</a></li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-          </ul>
-        </div>
+       <div class="mx-auto py-5 ">
+          <div
+            class="w-[600px] bg-[white] bg-opacity-10 backdrop-blur-sm shadow-white shadow-sm py-3 rounded-[50px]" 
+          >
+            <ul
+              class="navbar-nav flex justify-around font-[Jost] text-white font-[600]"
+            >
+              <li class="nav-items"><a href="#Home">Home </span></a>  </li>
+              <li class="nav-items"><a href="#About">About  </a>  </li>
+              <li class="nav-items"><a href="#skills">Skills </a>  </li>
+              <li class="nav-items"><a href="#">Projects</a>  </li>
+              <li class="nav-items"><a href="#">Contact</a>  </li>
+            </ul>
+          </div>
+       </div>
       </nav>
     </header>
+
+
+    <!--Home start-->
+    <section id="Home">
+      <div class="2xl:container mx-auto py-5">
+        <div class="md:w-[90%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+          <div class=" flex flex-col justify-center px-8">
+              <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[50px] flex-nowarp">Hi, I'm [Saran Kumar]</h1>
+              <p class="font-[Jost] text-white font-[400] text-[30px]">MERN Stack Developer</p>
+          </div>
+
+          <div class="flex justify-center">
+            <img src="./sk.jpg" alt="image" class=" w-[400px] h-auto rounded-[30px] clip-custom m-auto ">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Home End-->
+
+     <!--About start-->
+     <section id="About">
+       <div class="2xl:container mx-auto py-5">
+        <div class="md:w-[90%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+          <div class="flex flex-col justify-center items-center space-y-5">
+            <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[50px] flex-nowarp">About me</h1>
+            <p class="font-[Jost] text-white font-[400] text-[20px] text-center">I am a motivated <strong>MERN Stack Developer Fresher</strong> with a B.Tech in Information Technology (2024), skilled in JavaScript, MongoDB, Express.js, React.js, and Node.js. I enjoy building dynamic and responsive web applications and have hands-on experience with tools like Git/GitHub, VS Code, and Firebase. Proficient in frameworks such as Tailwind CSS and Bootstrap, I am eager to learn, grow, and contribute to impactful projects as a fresher in web development.</p>
+          </div>
+        </div>
+       </div>
+     </section>
+     <!--About End-->
+
+     <!--Skills start-->
+     <section id="skills">
+      <div class="2xl:container mx-auto">
+        <div class="md:w-[90%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm ">
+            <div class="flex justify-center py-5">
+                <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[50px] flex-nowarp">Skills</h1>
+            </div>
+        </div>
+      </div>
+     </section>
+     <!--Skills end-->
+
+     <!--Sidebar start-->
+     <div class="nav-container fixed">
+          <ul>
+            <li class="side-item text-white"> <a href="" class=""><span class="icon"></span></a></li>
+            <li class="side-item text-white"> <a href="" class=""><span class="icon"></span></a></li>
+            <li class="side-item text-white"> <a href="" class=""><span class="icon"><i class="fa-brands fa-github"></i></span></a></li>
+          </ul>
+     </div>
+     <!--Sidebar end-->
+
   </body>
 </html>
-
-

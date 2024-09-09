@@ -15,14 +15,14 @@
       rel="stylesheet"
     />
     <!--Fontaswsome cdn-->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
     <!--CSS File-->
     <link rel="stylesheet" href="index.css" />
     <!--Tailwind CSS file-->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-[url(body.png)] bg-cover bg-center h-screen">
+  <body class="bg-[url(body.png)] bg-cover bg-fixed bg-center h-screen">
     <!--COMMON Style
     h1 :
     p : font-[Poiret One]
@@ -31,7 +31,7 @@
 
     <!--Navbar-->
     <header>
-      <nav class="flex justify-center my-5">
+      <nav class="flex justify-center my-5  ">
        <div class="mx-auto py-5 ">
           <div
             class="w-[600px] bg-[white] bg-opacity-10 backdrop-blur-sm shadow-white shadow-sm py-3 rounded-[50px]" 
@@ -42,8 +42,8 @@
               <li class="nav-items"><a href="#Home">Home </span></a>  </li>
               <li class="nav-items"><a href="#About">About  </a>  </li>
               <li class="nav-items"><a href="#skills">Skills </a>  </li>
-              <li class="nav-items"><a href="#">Projects</a>  </li>
-              <li class="nav-items"><a href="#">Contact</a>  </li>
+              <li class="nav-items"><a href="#project">Projects</a>  </li>
+              <li class="nav-items"><a href="#contact">Contact</a>  </li>
             </ul>
           </div>
        </div>
@@ -54,14 +54,14 @@
     <!--Home start-->
     <section id="Home">
       <div class="2xl:container mx-auto py-5">
-        <div class="md:w-[90%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
-          <div class=" flex flex-col justify-center px-8">
-              <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[50px] flex-nowarp">Hi, I'm [Saran Kumar]</h1>
-              <p class="font-[Jost] text-white font-[400] text-[30px]">MERN Stack Developer</p>
+        <div class="md:w-[70%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+          <div class=" flex flex-col justify-center items-center px-8">
+              <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[40px] flex-nowarp">Hi,I'm [Saran Kumar]</h1>
+              <p class="font-[Jost] text-white font-[400] text-[25px]">FrontEnd Developer</p>
           </div>
 
-          <div class="flex justify-center">
-            <img src="./sk.jpg" alt="image" class=" w-[400px] h-auto rounded-[30px] clip-custom m-auto ">
+          <div class="flex justify-center py-5">
+            <img src="./sk.jpg" alt="image" class=" w-[400px] h-auto rounded-xl  m-auto sk ">
           </div>
         </div>
       </div>
@@ -71,10 +71,18 @@
      <!--About start-->
      <section id="About">
        <div class="2xl:container mx-auto py-5">
-        <div class="md:w-[90%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
-          <div class="flex flex-col justify-center items-center space-y-5">
-            <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[50px] flex-nowarp">About me</h1>
-            <p class="font-[Jost] text-white font-[400] text-[20px] text-center">I am a motivated <strong>MERN Stack Developer Fresher</strong> with a B.Tech in Information Technology (2024), skilled in JavaScript, MongoDB, Express.js, React.js, and Node.js. I enjoy building dynamic and responsive web applications and have hands-on experience with tools like Git/GitHub, VS Code, and Firebase. Proficient in frameworks such as Tailwind CSS and Bootstrap, I am eager to learn, grow, and contribute to impactful projects as a fresher in web development.</p>
+        <div class="md:w-[70%] sm:w-[80%] mx-auto px-8 py-4 grid grid-cols-1">
+          <div class="flex flex-col justify-center items-center space-y-4">
+            <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[40px] flex-nowarp">About me</h1>
+          </div>
+        </div>
+
+        <div class="md:w-[70%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 md:grid-cols-2 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+          <div class="flex justify-center items-center leading-8">
+          <p class="font-[Jost] text-white font-[400] text-[18px] text-justify px-8 py-4">I am a motivated <strong>FrontEnd Developer Fresher</strong> with a B.Tech in Information Technology (2024), skilled in JavaScript, HTML, CSS and React.js. I enjoy building dynamic and responsive web applications and have hands-on experience with tools like Git/GitHub, VS Code, and Firebase. Proficient in frameworks such as Tailwind CSS and Bootstrap, I am eager to learn, grow, and contribute to impactful projects as a fresher in web development.</p>
+          </div>
+          <div>
+            <img src="./Assests/sk about.png" alt="about-img">
           </div>
         </div>
        </div>
@@ -83,25 +91,196 @@
 
      <!--Skills start-->
      <section id="skills">
-      <div class="2xl:container mx-auto">
-        <div class="md:w-[90%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm ">
-            <div class="flex justify-center py-5">
-                <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[50px] flex-nowarp">Skills</h1>
+      <div class="2xl:container mx-auto py-5">
+        <div class="w-[90%] mx-auto grid grid-cols-1 px-8 py-4">
+            <div class="flex justify-center items-center py-2 space-y-4">
+                <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[40px] flex-nowarp">Skills</h1>
             </div>
         </div>
+          
+        <div class="md:w-[70%] sm:w-[60%] mx-auto  grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <div class="flex  flex-col justify-center items-center py-5 px-10 gap-4 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+                  <h1 class="font-[Jost] text-[#ffffff] font-[600] text-[25px] flex-nowarp">Languages</h1>
+
+            <div class="flex flex-row flex-wrap justify-evenly items-center gap-4">
+              <div class="flex flex-col items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/Html.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">HTML</p>
+              </div>
+              
+              <div class="flex flex-col items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/css.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">CSS</p>
+               </div>
+              <div class="flex flex-col items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/js.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">JavaScript</p>
+               </div>
+              <div class="flex flex-col items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/bootstrap.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">Bootstrap</p>
+               </div>
+              <div class="flex flex-col items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/tailwind-css.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">Tailwindcss</p>
+               </div>
+              <div class="flex flex-col items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/reactjs.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">ReactJs</p>
+              </div>
+            </div>
+          </div>
+                              
+          <div class="flex  flex-col  items-center py-5 px-10 gap-4 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+            <h1 class="font-[Jost] text-[#ffffff] font-[600] text-[25px] flex-nowarp">Tools</h1>
+
+            <div class="flex flex-row flex-wrap justify-around items-center gap-4">
+              <div class="flex flex-col justify-around items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/visual-studio-code.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">VS Code</p>
+              </div>
+              
+              <div class="flex flex-col items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/github.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">Github</p>
+              </div>
+  
+              <div class="flex flex-col items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/ps.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">Photoshop</p>
+              </div>
+  
+              <div class="flex flex-col items-center">
+                <div class="skill-item flex flex-col justify-center items-center">
+                  <img src="./Assests/firebase.png" alt="" class="h-12 drop-shadow-lg shadow-black">
+                </div>
+                <p class="font-[Jost] text-white font-[400] text-[16px] text-center">Firebase</p>
+              </div>
+            </div>
+            </div>
+         </div>
       </div>
      </section>
      <!--Skills end-->
 
+    <!--Project Start-->
+    <section id="project">
+     <div class="2xl:container mx-auto py-5">
+      <div class="w-[90%] mx-auto grid grid-cols-1 ">
+         <div class="flex flex-col justify-center items-center py-4">
+          <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[40px] flex-nowarp">Projects</h1>
+         </div>
+      </div>
+      
+      <div class="w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 gap-6">
+        
+        <div class="bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm flex flex-col justify-center items-center py-5">
+          <img src="./Assests/thumbnail ofs.png" alt="food order img" class=" h-50 px-3 rounded-[20px]">
+         <div class="flex flex-col justify-center items-center">
+            <p class="font-[Jost] text-[#ffffff] font-[600] text-[20px] px-3 mt-2 flex-nowarp">My Protfolio website</p>
+            <p class="font-[Jost] text-[#ffffff] font-[400] text-[12px] px-3 mt-2 text-center">Created my own portfolio using HTML, CSS, Tailwind, with Git/GitHub for VC and Firebase for deployment.</p>
+         </div>
+          <div class="space-x-4 mt-4 mb ">
+            <a href="https://food-store-online.web.app/" target="_blank">
+              <button class="bg-green-600 py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] ">Demo <i class="fa-solid fa-link"></i>
+              </button>
+            </a>
+            <a href="https://github.com/saransk03/Food-store" target="_blank">
+              <button class="bg-black py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] ">Github <i class="fa-brands fa-github"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm flex flex-col justify-center items-center py-5">
+          <img src="./Assests/thumbnail ofs.png" alt="food order img" class=" h-50 px-3 rounded-[20px]">
+         <div class="flex flex-col justify-center items-center">
+            <p class="font-[Jost] text-[#ffffff] font-[600] text-[20px] px-3 mt-2 flex-nowarp">Online Food Order Website</p>
+            <p class="font-[Jost] text-[#ffffff] font-[400] text-[12px] px-3 mt-2 text-center">Designed and developed a responsive online food ordering site using HTML, CSS, and Tailwind CSS.</p>
+         </div>
+          <div class="space-x-4 mt-4 mb ">
+            <a href="https://food-store-online.web.app/" target="_blank">
+              <button class="bg-green-600 py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] ">Demo <i class="fa-solid fa-link"></i>
+              </button>
+            </a>
+            <a href="https://github.com/saransk03/Food-store" target="_blank">
+              <button class="bg-black py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] ">Github <i class="fa-brands fa-github"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm flex flex-col justify-center items-center py-5">
+          <img src="./Assests/thumbnail ofs.png" alt="food order img" class=" h-50 px-3 rounded-[20px]">
+         <div class="flex flex-col justify-center items-center">
+            <p class="font-[Jost] text-[#ffffff] font-[600] text-[20px] px-3 mt-2 flex-nowarp">Online Food Order Website</p>
+            <p class="font-[Jost] text-[#ffffff] font-[400] text-[12px] px-3 mt-2 text-center">Designed and developed a responsive online food ordering site using HTML, CSS, and Tailwind CSS.</p>
+         </div>
+          <div class="space-x-4 mt-4 mb ">
+            <a href="https://food-store-online.web.app/" target="_blank">
+              <button class="bg-green-600 py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] ">Demo <i class="fa-solid fa-link"></i>
+              </button>
+            </a>
+            <a href="https://github.com/saransk03/Food-store" target="_blank">
+              <button class="bg-black py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] ">Github <i class="fa-brands fa-github"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+     </div>
+    </section>
+    <!--Projrct end-->
+
      <!--Sidebar start-->
-     <div class="nav-container fixed">
-          <ul>
-            <li class="side-item text-white"> <a href="" class=""><span class="icon"></span></a></li>
-            <li class="side-item text-white"> <a href="" class=""><span class="icon"></span></a></li>
-            <li class="side-item text-white"> <a href="" class=""><span class="icon"><i class="fa-brands fa-github"></i></span></a></li>
-          </ul>
+     <div class="nav-container fixed ">
+
+            <div class="flex items-center">
+              <div class="side-item flex flex-col justify-center items-center hover:text-[24px]">
+                <a href="" class=""><i class="fa-regular fa-file text-[18px] text-white"></i></a>
+              </div>
+              <!-- <p class="font-[Jost] text-white font-[400] text-[20px] text-center">Resume</p> -->
+            </div>
+
+           <div class="flex items-center">
+              <div class="side-item flex flex-col justify-center items-center hover:text-[24px]">
+                <a href="https://www.linkedin.com/in/sarankumar-m/" class=""><i class="fa-brands fa-linkedin-in text-[18px]  text-white"></i></a>
+              </div>
+              <!-- <p class="font-[Jost] text-white font-[400] text-[20px] text-center"> Linkedin</p> -->
+           </div>
+
+            <div class="flex items-center ">
+              <div class="side-item flex flex-col justify-center items-center ">
+                <a href="https://github.com/saransk03" class=""><i class="fa-brands fa-github text-[18px] text-white"></i></a>
+              </div>
+              <!-- <p class="font-[Jost] text-white font-[400] text-[20px] text-center">Github</p> -->
+            </div>
+            
      </div>
      <!--Sidebar end-->
+
+
+
 
   </body>
 </html>

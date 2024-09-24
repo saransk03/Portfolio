@@ -22,46 +22,75 @@
     <!--Tailwind CSS file-->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-[url(body.png)] bg-cover bg-fixed bg-center h-screen">
+  <body class="bg-[url(body.png)] bg-cover bg-fixed bg-center h-screen border-b-0">
     <!--COMMON Style
     h1 :
     p : font-[Poiret One]
     button :
-    -->
+    --> 
+  
 
     <!--Navbar-->
-    <header>
-      <nav class="flex justify-center my-5  ">
-       <div class="mx-auto py-5 ">
+    
+      <nav class="w-[70%] box-border flex justify-center my-5 mx-auto py-5 hidden md:flex">
           <div
-            class="w-[600px] bg-[white] bg-opacity-10 backdrop-blur-sm shadow-white shadow-sm py-3 rounded-[50px]" 
+            class="w-[600px] h-[50px] bg-[white] box-border bg-opacity-10 backdrop-blur-sm shadow-white shadow-sm py-3 rounded-[50px]" 
           >
             <ul
-              class="navbar-nav flex justify-around font-[Jost] text-white font-[600]"
+              class="navbar-nav box-border flex justify-around font-[Jost] text-white font-[600]"
             >
-              <li class="nav-items"><a href="#Home">Home </span></a>  </li>
+              <li class="nav-items"><a href="#Home">Home    </span></a>  </li>
               <li class="nav-items"><a href="#About">About  </a>  </li>
-              <li class="nav-items"><a href="#skills">Skills </a>  </li>
-              <li class="nav-items"><a href="#project">Projects</a>  </li>
-              <li class="nav-items"><a href="#contact">Contact</a>  </li>
+              <li class="nav-items"><a href="#Skills">Skills </a>  </li>
+              <li class="nav-items"><a href="#Project">Projects</a>  </li>
+              <li class="nav-items"><a href="#Contact">Contact</a>  </li>
             </ul>
           </div>
-       </div>
       </nav>
-    </header>
+      <!--nav in phone start-->
+
+       <div class="phonemenu md:hidden">
+          <div
+            class="burger fixed" 
+          >
+            <div class="border  h-[50px] w-[50px] rounded-[50px] flex flex-col justify-center items-center" >
+              <i class="fa-solid fa-bars text-white text-center text-[25px]" id="menu"></i>
+              <i class="fa-solid fa-xmark  text-white text-center text-[25px] hidden" id="cross"></i>
+            </div>
+         
+          </div>
+         <div  class="navphone fixed bg-[white] box-border bg-opacity-10 backdrop-blur-sm shadow-white shadow-sm py-3 hidden"  id="nav">
+            <ul
+            class="navbar-nav box-border flex flex-col justify-center items-center gap-3 font-[Jost] text-white font-[600]"
+           >
+            <li class="mobnav-items"><a href="#Home"    id="home">Home    </a>  </li>
+            <li class="mobnav-items"><a href="#About"   id="about">About   </a>  </li>
+            <li class="mobnav-items"><a href="#Skills"  id="skills">Skills  </a>  </li>
+            <li class="mobnav-items"><a href="#Project" id="projects">Projects</a>  </li>
+            <li class="mobnav-items"><a href="#Contact" id="contact">Contact </a>  </li>
+          </ul>
+         </div>
+       </div>
+
+      <!--nav in phone End-->
 
 
     <!--Home start-->
     <section id="Home">
       <div class="2xl:container mx-auto py-5">
-        <div class="md:w-[70%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
-          <div class=" flex flex-col justify-center items-center px-8">
-              <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[40px] flex-nowarp">Hi,I'm [Saran Kumar]</h1>
-              <p class="font-[Jost] text-white font-[400] text-[25px]">FrontEnd Developer</p>
+        <div class="w-[70%] mx-auto p-8 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm slide-right">
+          <div class=" flex flex-col justify-center items-center px-8 order-1 md:order-2">
+              <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[40px] text-center flex-nowarp">Hi,I'm [Saran Kumar]</h1>
+              <p class="font-[Jost] text-white font-[400] sm:text-start text-[25px]">FrontEnd Developer</p>
+              <div>
+                <button class="bg-gradient-to-r from-green-900 to-blue-900 rounded-lg text-white mt-3 font-[Jost] text-[14px] font-[700] px-3 py-2 w-[130px] box-border">
+                  Download CV
+                </button>
+              </div>
           </div>
 
-          <div class="flex justify-center py-5">
-            <img src="./sk.jpg" alt="image" class=" w-[400px] h-auto rounded-xl  m-auto sk ">
+          <div class="flex justify-center py-5 ">
+            <img src="./Assests/protfolio img.png" alt="image" class=" w-[400px] h-auto rounded-xl  m-auto sk slit-in-vertical">
           </div>
         </div>
       </div>
@@ -71,13 +100,13 @@
      <!--About start-->
      <section id="About">
        <div class="2xl:container mx-auto py-5">
-        <div class="md:w-[70%] sm:w-[80%] mx-auto px-8 py-4 grid grid-cols-1">
+        <div class="md:w-[70%] w-[60%] mx-auto px-8 py-4 grid grid-cols-1">
           <div class="flex flex-col justify-center items-center space-y-4">
             <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[40px] flex-nowarp">About me</h1>
           </div>
         </div>
 
-        <div class="md:w-[70%] sm:w-[80%] mx-auto p-8 grid grid-cols-1 md:grid-cols-2 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+        <div class="md:w-[70%] w-[70%] mx-auto p-8 grid grid-cols-1 md:grid-cols-2 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm slide-left">
           <div class="flex justify-center items-center leading-8">
           <p class="font-[Jost] text-white font-[400] text-[18px] text-justify px-8 py-4">I am a motivated <strong>FrontEnd Developer Fresher</strong> with a B.Tech in Information Technology (2024), skilled in JavaScript, HTML, CSS and React.js. I enjoy building dynamic and responsive web applications and have hands-on experience with tools like Git/GitHub, VS Code, and Firebase. Proficient in frameworks such as Tailwind CSS and Bootstrap, I am eager to learn, grow, and contribute to impactful projects as a fresher in web development.</p>
           </div>
@@ -90,7 +119,7 @@
      <!--About End-->
 
      <!--Skills start-->
-     <section id="skills">
+     <section id="Skills">
       <div class="2xl:container mx-auto py-5">
         <div class="w-[90%] mx-auto grid grid-cols-1 px-8 py-4">
             <div class="flex justify-center items-center py-2 space-y-4">
@@ -98,9 +127,9 @@
             </div>
         </div>
           
-        <div class="md:w-[70%] sm:w-[60%] mx-auto  grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="w-[70%] mx-auto  grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
 
-            <div class="flex  flex-col justify-center items-center py-5 px-10 gap-4 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+            <div class="flex  flex-col justify-center items-center py-5 px-10 gap-4 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm slide-right">
                   <h1 class="font-[Jost] text-[#ffffff] font-[600] text-[25px] flex-nowarp">Languages</h1>
 
             <div class="flex flex-row flex-wrap justify-evenly items-center gap-4">
@@ -144,7 +173,7 @@
             </div>
           </div>
                               
-          <div class="flex  flex-col  items-center py-5 px-10 gap-4 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+          <div class="flex flex-col  items-center py-5 px-10 gap-4 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm slide-left">
             <h1 class="font-[Jost] text-[#ffffff] font-[600] text-[25px] flex-nowarp">Tools</h1>
 
             <div class="flex flex-row flex-wrap justify-around items-center gap-4">
@@ -183,7 +212,7 @@
      <!--Skills end-->
 
     <!--Project Start-->
-    <section id="project">
+    <section id="Project">
      <div class="2xl:container mx-auto py-5">
       <div class="w-[90%] mx-auto grid grid-cols-1 ">
          <div class="flex flex-col justify-center items-center py-4">
@@ -191,20 +220,20 @@
          </div>
       </div>
       
-      <div class="w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 gap-6">
+      <div class="w-[70%] mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 p-2 gap-6">
         
-        <div class="bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm flex flex-col justify-center items-center py-5">
-          <img src="./Assests/thumbnail ofs.png" alt="food order img" class=" h-50 px-3 rounded-[20px]">
+        <div class="bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm flex flex-col justify-center items-center py-5 slide-right">
+          <img src="./Assests/Thumbnail ss.png" alt="food order img" class=" h-50 px-3 rounded-[20px]">
          <div class="flex flex-col justify-center items-center">
-            <p class="font-[Jost] text-[#ffffff] font-[600] text-[20px] px-3 mt-2 flex-nowarp">My Protfolio website</p>
-            <p class="font-[Jost] text-[#ffffff] font-[400] text-[12px] px-3 mt-2 text-center">Created my own portfolio using HTML, CSS, Tailwind, with Git/GitHub for VC and Firebase for deployment.</p>
+            <p class="font-[Jost] text-[#ffffff] font-[600] text-[20px] text-center px-3 mt-2 flex-nowarp">My Protfolio website</p>
+            <p class="font-[Jost] text-[#ffffff] font-[400] text-[12px] text-center px-3 mt-2">Created my own portfolio using HTML, CSS, Tailwind, with Git/GitHub for VC and Firebase for deployment.</p>
          </div>
-          <div class="space-x-4 mt-4 mb ">
+          <div class="space-x-4 mt-4 flex flex-row ">
             <a href="https://food-store-online.web.app/" target="_blank">
-              <button class="bg-green-600 py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] ">Demo <i class="fa-solid fa-link"></i>
+              <button class="bg-green-600 py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] flex-wrap">Demo <i class="fa-solid fa-link"></i>
               </button>
             </a>
-            <a href="https://github.com/saransk03/Food-store" target="_blank">
+            <a href="https://github.com/saransk03/Portfolio" target="_blank">
               <button class="bg-black py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] ">Github <i class="fa-brands fa-github"></i>
               </button>
             </a>
@@ -214,8 +243,8 @@
         <div class="bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm flex flex-col justify-center items-center py-5">
           <img src="./Assests/thumbnail ofs.png" alt="food order img" class=" h-50 px-3 rounded-[20px]">
          <div class="flex flex-col justify-center items-center">
-            <p class="font-[Jost] text-[#ffffff] font-[600] text-[20px] px-3 mt-2 flex-nowarp">Online Food Order Website</p>
-            <p class="font-[Jost] text-[#ffffff] font-[400] text-[12px] px-3 mt-2 text-center">Designed and developed a responsive online food ordering site using HTML, CSS, and Tailwind CSS.</p>
+            <p class="font-[Jost] text-[#ffffff] font-[600] text-[20px] text-center px-3 mt-2 flex-nowarp">Online Food Order Website</p>
+            <p class="font-[Jost] text-[#ffffff] font-[400] text-[12px] text-center px-3 mt-2">Designed and developed a responsive online food ordering site using HTML, CSS, and Tailwind CSS.</p>
          </div>
           <div class="space-x-4 mt-4 mb ">
             <a href="https://food-store-online.web.app/" target="_blank">
@@ -229,13 +258,13 @@
           </div>
         </div>
         
-        <div class="bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm flex flex-col justify-center items-center py-5">
+        <div class="bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm flex flex-col justify-center items-center py-5 slide-left">
           <img src="./Assests/thumbnail ofs.png" alt="food order img" class=" h-50 px-3 rounded-[20px]">
          <div class="flex flex-col justify-center items-center">
-            <p class="font-[Jost] text-[#ffffff] font-[600] text-[20px] px-3 mt-2 flex-nowarp">Online Food Order Website</p>
-            <p class="font-[Jost] text-[#ffffff] font-[400] text-[12px] px-3 mt-2 text-center">Designed and developed a responsive online food ordering site using HTML, CSS, and Tailwind CSS.</p>
+            <p class="font-[Jost] text-[#ffffff] font-[600] text-[20px] text-center px-3 mt-2 flex-nowarp">Online Food Order Website</p>
+            <p class="font-[Jost] text-[#ffffff] font-[400] text-[12px] text-center px-3 mt-2 ">Designed and developed a responsive online food ordering site using HTML, CSS, and Tailwind CSS.</p>
          </div>
-          <div class="space-x-4 mt-4 mb ">
+          <div class=" space-x-4 mt-4 flex-wrap justify-center items-center">
             <a href="https://food-store-online.web.app/" target="_blank">
               <button class="bg-green-600 py-3 px-8 rounded-xl font-[Jost] text-white font-[600] text-[16px] ">Demo <i class="fa-solid fa-link"></i>
               </button>
@@ -253,34 +282,94 @@
     <!--Projrct end-->
 
      <!--Sidebar start-->
-     <div class="nav-container fixed ">
-
-            <div class="flex items-center">
-              <div class="side-item flex flex-col justify-center items-center hover:text-[24px]">
-                <a href="" class=""><i class="fa-regular fa-file text-[18px] text-white"></i></a>
-              </div>
-              <!-- <p class="font-[Jost] text-white font-[400] text-[20px] text-center">Resume</p> -->
-            </div>
-
-           <div class="flex items-center">
-              <div class="side-item flex flex-col justify-center items-center hover:text-[24px]">
-                <a href="https://www.linkedin.com/in/sarankumar-m/" class=""><i class="fa-brands fa-linkedin-in text-[18px]  text-white"></i></a>
-              </div>
-              <!-- <p class="font-[Jost] text-white font-[400] text-[20px] text-center"> Linkedin</p> -->
-           </div>
-
-            <div class="flex items-center ">
-              <div class="side-item flex flex-col justify-center items-center ">
-                <a href="https://github.com/saransk03" class=""><i class="fa-brands fa-github text-[18px] text-white"></i></a>
-              </div>
-              <!-- <p class="font-[Jost] text-white font-[400] text-[20px] text-center">Github</p> -->
-            </div>
-            
-     </div>
+     <a href="Home">
+       <div class="nav-container fixed cursor-pointer " id="upbtn">
+               <div class="border  h-[50px] w-[50px] rounded-[50px] flex flex-col justify-center items-center">
+                 <i class="fa-solid fa-arrow-up  text-[18px] text-white"></i>
+               </div>
+        </div>
+     </a>
      <!--Sidebar end-->
 
+     <!--Contact start-->
+     <section id="Contact">
+      <div class="2xl:container mx-auto">
+        <div class="w-[80%] mx-auto grid grid-cols-1 py-5">
+          <div class="flex justify-center items-start">
+            <h1 class="font-[Jost] text-[#ccb419] font-[800] text-[40px] flex-nowarp">Contact me</h1>
+          </div>
+        </div>
 
+        <div class="w-[70%] mx-auto pb-4 gap-5 grid grid-col-1 md:grid-cols-1 lg:grid-cols-2 bg-[white] bg-opacity-5 rounded-xl backdrop-blur-md shadow-white shadow-sm">
+          <div class=" flex flex-col mx-auto justify-center items-start mt-5 ">
+            <div class="flex px-8 pt-4">
+              <h2 class="font-[Jost] text-[#ccb419] font-[800] text-[24px] flex-nowarp">Say "Hi"</h2>
+            </div>
+            <div class="flex flex-col justify-center px-8 gap-2 mt-4">
+                 <form class="flex flex-col gap-2">
+                   <label for="name" class="text-white font-[Jost] text-start  font-[400] text-[20px]">Name :</label>
+                   <input type="text" required id="" placeholder="Enter your name" class="h-[40px] w-[300px] font-[Jost]  text-white bg-[transparent] border border-white rounded-md box-border px-2 py-1">
+                   <label for="email"   class="text-white font-[Jost]  font-[400] text-[20px]">Email :</label>
+                   <input type="email" required id=""  placeholder="Enter your email" class="h-[40px] w-[300px] font-[Jost]  text-white bg-[transparent] border border-white rounded-md box-border px-2 py-1">
+                   <label for="message" class="text-white font-[Jost]  font-[400] text-[20px]">Message :</label>
+                   <textarea name="" class="h-[60px] w-[300px] rounded-md bg-[transparent] font-[Jost]  text-white border border-white box-border p-2" placeholder="Say 'Hi'..." id=""></textarea>
+    
+                  <div class="flex justify-center m-4">
+                     <button class=" bg-gradient-to-r from-green-900 to-blue-900 rounded-lg text-white font-[Jost] text-[14px] font-[700] px-3 py-2 w-[130px] box-border">
+                       Send Message
+                     </button>
+                  </div>
+                 </form>
 
+                 <div class="flex flex-row justify-center items-center mb-3 gap-4">
+                  
+                 <div class="flex items-center">
+                    <div class="side-item flex flex-col justify-center items-center hover:text-[24px]">
+                      <a href="https://www.linkedin.com/in/sarankumar-m/" target="_blank" class=""><i class="fa-brands fa-linkedin-in text-[18px]  text-white"></i></a>
+                    </div>
+                    <!-- <p class="font-[Jost] text-white font-[400] text-[20px] text-center"> Linkedin</p> -->
+                 </div>
+      
+                  <div class="flex items-center ">
+                    <div class="side-item flex flex-col justify-center items-center ">
+                      <a href="https://github.com/saransk03" target="_blank" class=""><i class="fa-brands fa-github text-[18px] text-white"></i></a>
+                    </div>
+                    <!-- <p class="font-[Jost] text-white font-[400] text-[20px] text-center">Github</p> -->
+                  </div>
 
+                  <div class="flex items-center">
+                    <div class="side-item flex flex-col justify-center items-center hover:text-[24px]">
+                      <a href="mailto:saransk753@gmail.com" class=""><i class="fa-regular fa-envelope text-[18px] text-white"></i></a>
+                    </div>
+                    <!-- <p class="font-[Jost] text-white font-[400] text-[20px] text-center">Resume</p> -->
+                  </div>
+
+                 </div>
+            </div>       
+          </div>
+
+          <div class="flex justify-center items-center hidden lg:flex">
+            <img src="./Assests/Contact.png" alt="contact-img" class="w-[400px] sm:hidden md:hidden lg:flex">
+          </div>
+
+        </div>
+      </div>
+     </section>
+     <!--Contact End-->
+
+     <!--Footer start-->
+     <footer>
+      <div class="2xl:container mx-auto">
+        <div class="flex justify-center items-center gap-4 py-2 mt-4 bg-black">
+          <div class="flex flex-col items-center">
+            <p class=" font-[Jost]  font-[400] text-white text-[12px] flex-nowarp">&#169 2024 saransk. All rights reserved</p>
+          </div>
+        </div>
+      </div>  
+     </footer>
+     <!--Footer end-->
+
+     <!--Js file-->
+     <script src="script.js"></script>
   </body>
 </html>

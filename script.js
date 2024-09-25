@@ -1,10 +1,15 @@
 
 
 // select the up button
+const upBtn = document.querySelector(".totop")
 
-const upBtn = document.getElementById("upbtn")
+window.addEventListener("scroll",()=>{
 
- upBtn.addEventListener("click", ()=>{
+    if(window.pageYOffset > 200){
+        upBtn.classList.add("active")
+    }else{
+        upBtn.classList.remove("active")
+    }
 
 })
 
@@ -17,6 +22,8 @@ const crossElement = document.getElementById("cross");
 const navItems = document.getElementById("nav")
 
  menuElement.addEventListener("click", ()=>{
+    console.log(menuElement)
+
     crossElement.classList.remove("hidden")
     menuElement.classList.add("hidden")
     navItems.classList.remove("hidden")
@@ -67,3 +74,4 @@ contactElement.addEventListener("click",()=>{
     crossElement.classList.add("hidden")
     navItems.classList.add("hidden")
 })
+

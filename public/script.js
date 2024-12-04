@@ -1,121 +1,117 @@
-
-
 // select the up button
-const upBtn = document.querySelector(".totop")
+const upBtn = document.querySelector(".totop");
 
-window.addEventListener("scroll",()=>{
-
-    if(window.pageYOffset > 200){
-        upBtn.classList.add("active")
-    }else{
-        upBtn.classList.remove("active")
-    }
-
-})
-
-
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 200) {
+    upBtn.classList.add("active");
+  } else {
+    upBtn.classList.remove("active");
+  }
+});
 
 // menu burger
 
-const menuElement = document.getElementById("menu") 
+const menuElement = document.getElementById("menu");
 const crossElement = document.getElementById("cross");
-const navItems = document.getElementById("nav")
+const navItems = document.getElementById("nav");
 
- menuElement.addEventListener("click", ()=>{
-    console.log(menuElement)
+menuElement.addEventListener("click", () => {
+  console.log(menuElement);
 
-    crossElement.classList.remove("hidden")
-    menuElement.classList.add("hidden")
-    navItems.classList.remove("hidden")
- });
+  crossElement.classList.remove("hidden");
+  menuElement.classList.add("hidden");
+  navItems.classList.remove("hidden");
+});
 
- crossElement.addEventListener("click", ()=>{
-    menuElement.classList.remove("hidden")
-    crossElement.classList.add("hidden")
-    navItems.classList.add("hidden")
- })
+crossElement.addEventListener("click", () => {
+  menuElement.classList.remove("hidden");
+  crossElement.classList.add("hidden");
+  navItems.classList.add("hidden");
+});
 
-const homeElement = document.getElementById("home")
+const homeElement = document.getElementById("home");
 
-homeElement.addEventListener("click",()=>{
-    menuElement.classList.remove("hidden")
-    crossElement.classList.add("hidden")
-    navItems.classList.add("hidden")
-})
+homeElement.addEventListener("click", () => {
+  menuElement.classList.remove("hidden");
+  crossElement.classList.add("hidden");
+  navItems.classList.add("hidden");
+});
 
-const aboutElement = document.getElementById("about")
+const aboutElement = document.getElementById("about");
 
-aboutElement.addEventListener("click",()=>{
-    menuElement.classList.remove("hidden")
-    crossElement.classList.add("hidden")
-    navItems.classList.add("hidden")
-})
+aboutElement.addEventListener("click", () => {
+  menuElement.classList.remove("hidden");
+  crossElement.classList.add("hidden");
+  navItems.classList.add("hidden");
+});
 
-const skillsElement = document.getElementById("skills")
+const skillsElement = document.getElementById("skills");
 
-skillsElement.addEventListener("click",()=>{
-    menuElement.classList.remove("hidden")
-    crossElement.classList.add("hidden")
-    navItems.classList.add("hidden")
-})
+skillsElement.addEventListener("click", () => {
+  menuElement.classList.remove("hidden");
+  crossElement.classList.add("hidden");
+  navItems.classList.add("hidden");
+});
 
-const projectsElement = document.getElementById("projects")
+const projectsElement = document.getElementById("projects");
 
-projectsElement.addEventListener("click",()=>{
-    menuElement.classList.remove("hidden")
-    crossElement.classList.add("hidden")
-    navItems.classList.add("hidden")
-})
+projectsElement.addEventListener("click", () => {
+  menuElement.classList.remove("hidden");
+  crossElement.classList.add("hidden");
+  navItems.classList.add("hidden");
+});
 
-const contactElement = document.getElementById("contact")
+const contactElement = document.getElementById("contact");
 
-contactElement.addEventListener("click",()=>{
-    menuElement.classList.remove("hidden")
-    crossElement.classList.add("hidden")
-    navItems.classList.add("hidden")
-})
+contactElement.addEventListener("click", () => {
+  menuElement.classList.remove("hidden");
+  crossElement.classList.add("hidden");
+  navItems.classList.add("hidden");
+});
 
-// store data in database
-const formElement= document.getElementById("form");
-const nameElement= document.getElementById("name")
-const emailId= document.getElementById("email")
-const messageElement= document.getElementById("message")
+// store data 
+const formElement = document.getElementById("form");
+const nameElement = document.getElementById("name");
+const emailId = document.getElementById("email");
+const messageElement = document.getElementById("message");
+const result = document.getElementById('result');
 
-function savadata(username,emailid,msg) {
-
-    // Your web app's Firebase configuration
-
-const firebaseConfig = {
-
-    apiKey: "AIzaSyAnG8eyOY9Qoxk0CbrvdK8u-9IlnRsAFDM",
-    authDomain: "my-protfolio-web.firebaseapp.com",
-    databaseURL: "https://my-protfolio-web-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "my-protfolio-web",
-    storageBucket: "my-protfolio-web.appspot.com",
-    messagingSenderId: "437578699556",
-    appId: "1:437578699556:web:7fb5996ea4e4f45414d9b1"
-};
-
-    if(!firebase.apps.length){
-      firebase.initializeApp(firebaseConfig);
-    }
-  
-    const db = firebase.database().ref("Contact");
-
-    db.push({
-      name: username,
-      email: emailid,
-      message: msg
-    }).then(()=>{
-        formElement.reset()
-    })
-}
-
-formElement.addEventListener("submit",(e)=>{
+formElement.addEventListener("submit", (e) => {
    e.preventDefault();
 
-    const username = nameElement.value;
-    const emailid= emailId.value;
-    const msg = messageElement.value
-   savadata(username,emailid,msg)
-})
+   const formData = new FormData(formElement);
+   const object = Object.fromEntries(formData);
+   const json = JSON.stringify(object);
+   result.innerHTML = "Please wait..."
+ 
+     fetch('https://api.web3forms.com/submit', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json',
+                 'Accept': 'application/json'
+             },
+             body: json
+         })
+         .then(async (response) => {
+             let json = await response.json();
+             if (response.status >= 200) {
+                 result.innerHTML = "Send successfully";
+             } else {
+                 console.log(response);
+                 result.innerHTML = json.message;
+             }
+         })
+         .catch(error => {
+             console.log(error);
+             result.innerHTML = "Not Send!";
+         })
+         .then(function() {
+            formElement.reset();
+             setTimeout(() => {
+                 result.innerHTML = "Send Message";
+             }, 3000);
+         });
+ });
+    
+
+
